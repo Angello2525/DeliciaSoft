@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DeliciaSoft")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb2d961a98b7786f0bc1b94de395bbcd19b1a7c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("DeliciaSoft")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DeliciaSoft")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

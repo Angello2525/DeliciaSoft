@@ -1,49 +1,58 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DeliciaSoft</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/DeliciaSoft.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/menu.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DeliciaSoft</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="menu-principal">
+            <div class="left-menu">
+                <a href="@Url.Action("Index", "Home")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">INICIO</a>
+                <a href="@Url.Action("Cartas", "Home")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Cartas" ? "active" : "")">CARTAS</a>
+                <a href="@Url.Action("Pedidos", "Home")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Pedidos" ? "active" : "")">PEDIDOS</a>
+                <a href="@Url.Action("Sedes", "Home")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Sedes" ? "active" : "")">SEDES</a>
+            </div>
+
+            <div class="logo">
+                <img src="~/images/logo.png" alt="Delicias Darsy" />
+            </div>
+
+            <div class="right-menu">
+                <a href="@Url.Action("Conocenos", "Home")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Conocenos" ? "active" : "")">CONOCENOS</a>
+                <a href="@Url.Action("Contactenos", "Home")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Contactenos" ? "active" : "")">CONTACTENOS</a>
+                <a href="@Url.Action("Login", "Account")" class="iniciar-sesion">INICIAR SESIÓN</a>
+            </div>
+
+            <div class="menu-toggle" id="menuToggle">☰</div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="@Url.Action("Index", "Home")" class="mobile-menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active-mobile" : "")">INICIO</a>
+                <a href="@Url.Action("Cartas", "Home")" class="mobile-menu-item">CARTAS</a>
+                <a href="@Url.Action("Pedidos", "Home")" class="mobile-menu-item">PEDIDOS</a>
+                <a href="@Url.Action("Sedes", "Home")" class="mobile-menu-item">SEDES</a>
+                <a href="@Url.Action("Conocenos", "Home")" class="mobile-menu-item">CONOCENOS</a>
+                <a href="@Url.Action("Contactenos", "Home")" class="mobile-menu-item">CONTACTENOS</a>
+                <a href="@Url.Action("Login", "Account")" class="mobile-menu-item">INICIAR SESIÓN</a>
             </div>
         </nav>
     </header>
+
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - DeliciaSoft - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer>
+        
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="~/js/site.js"></script>
+    <script src="~/js/menu.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -1,0 +1,126 @@
+﻿.menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%; 
+    background-color: transparent;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.left-menu, .right-menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    .logo img {
+        height: 100px; 
+        width: auto;
+    }
+
+.menu-item {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 20px; 
+    padding: 10px 0;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 18px; 
+}
+
+    .menu-item.active::after {
+        content: '';
+        position: absolute;
+        bottom: -3px; 
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #ff0066;
+    }
+
+.iniciar-sesion {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px; 
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    z-index: 1000;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+}
+
+.mobile-menu-item {
+    padding: 12px 25px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    white-space: nowrap;
+}
+
+.active-mobile {
+    color: #ff0066;
+}
+
+@media (max-width: 1024px) {
+    .left-menu, .right-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .logo {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-principal {
+        padding: 15px 5%;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+}
