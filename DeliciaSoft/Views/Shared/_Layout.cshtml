@@ -12,7 +12,7 @@
         <nav class="menu-principal">
             <div class="left-menu">
                 <a href="@Url.Action("Index", "Home")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">INICIO</a>
-                <a href="@Url.Action("Cartas", "Home")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Cartas" ? "active" : "")">CARTAS</a>
+                <a href="@Url.Action("cartas", "Home")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "cartas" ? "active" : "")">CARTAS</a>
                 <a href="@Url.Action("Pedidos", "Home")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Pedidos" ? "active" : "")">PEDIDOS</a>
                 <a href="@Url.Action("Sedes", "Home")" class="menu-item @(ViewContext.RouteData.Values["Action"].ToString() == "Sedes" ? "active" : "")">SEDES</a>
             </div>

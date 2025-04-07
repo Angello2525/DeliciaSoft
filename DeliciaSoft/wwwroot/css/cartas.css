@@ -1,0 +1,421 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+header {
+    background-color: #ff66b2;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+.banner {
+    background: url('banner.jpg') no-repeat center center;
+    height: 200px;
+    text-align: center;
+    color: #ff1493;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categorias, .destacados {
+    text-align: center;
+    padding: 20px;
+}
+
+.categoria-lista, .productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #fff;
+}
+
+.categoria, .producto {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.productos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.etiqueta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #FFC107;
+    color: black;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.imagen {
+    width: 100%;
+    height: 150px;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info h3 {
+    font-size: 14px;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.precio {
+    color: #ff0080;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Estilos para el carrusel */
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #fff; /* Amarillo */
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Carrusel */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300px; /* Ajustar al número de imágenes */
+    background-color: #fff
+}
+
+/* Estilos de cada categoría */
+.categoria {
+    min-width: 100%;
+    transition: 0.5s;
+    text-align: center;
+    background-color: #FFFFFF
+}
+
+    .categoria img {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        border-radius: 10px;
+        background-color: #fff;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+.categoria, .producto {
+    border: none;
+    border-color: #FFFFFF;
+}
+
+
+.imagen {
+    width: 100%;
+    height: 150px;
+    background: #fff; /* Cambié a blanco */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoria-texto {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Botones de navegación */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Botones al pasar el mouse */
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sección de promociones */
+.promociones {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+    .promociones h2 {
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+.promociones-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.promo-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+    .promo-card:hover {
+        transform: scale(1.05);
+    }
+
+.promo-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.promo-info {
+    padding: 15px;
+}
+
+    .promo-info h3 {
+        font-size: 20px;
+        color: #ff1493;
+        margin-bottom: 5px;
+    }
+
+    .promo-info p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+.promo-precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0080;
+}
+
+/* Sección de Cupón de Cumpleaños */
+.cupon-cumple {
+    background-color: #ffe6f2;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cupon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.cupon-info {
+    max-width: 50%;
+    text-align: left;
+}
+
+    .cupon-info h2 {
+        color: #ff1493;
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .cupon-info p {
+        color: #555;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+.codigo-cupon {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff0080;
+}
+
+    .codigo-cupon span {
+        background: #ff0080;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+.btn-canjear {
+    background: #ff0080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .btn-canjear:hover {
+        background: #cc0066;
+    }
+
+.cupon-img img {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .cupon-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cupon-info {
+        max-width: 100%;
+    }
+
+    .cupon-img img {
+        width: 150px;
+    }
+}
+
+
+
+
+
+footer {
+    background-color: #FF66B2;
+    padding: 40px 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+    .footer-section h3 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #FFD700;
+    }
+
+    .footer-section p {
+        font-size: 14px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .footer-section ul li {
+            margin: 5px 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+        }
+
+            .footer-section ul li a {
+                text-decoration: none;
+                color: black;
+            }
+
+                .footer-section ul li a:hover {
+                    color: #FFD700;
+                }
