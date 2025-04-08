@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicias Darsy</title>
+    <link rel="stylesheet" href="~/css/cartas.css">
+
+</head>
+<body>
+
+  
+    <section class="categorias">
+        <h2>CATEGORÍAS</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel">
+                <div class="categoria">
+                    <img src="~/images/Fresas.jpeg" alt="Fresas con crema">
+
+                </div>
+                <div class="categoria">
+                    <img src="~/images/Torta.jpeg" alt="Tortas">
+
+                </div>
+                <div class="categoria">
+                    <img src="~/images/chocolate.jpeg" alt="chocolate">
+
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+
+
+    <section class="destacados">
+        <h2>DESTACADOS</h2>
+        <div class="productos">
+            <div class="card">
+                <span class="etiqueta">DESTACADOS</span>
+                <div class="imagen"></div>
+                <div class="info">
+                    <h3>FRESAS CON CREMA</h3>
+                    <p class="precio">$7,000</p>
+                </div>
+            </div>
+            <div class="card">
+                <span class="etiqueta">DESTACADOS</span>
+                <div class="imagen"></div>
+                <div class="info">
+                    <h3>OBLEA</h3>
+                    <p class="precio">$3,000</p>
+                </div>
+            </div>
+            <div class="card">
+                <span class="etiqueta">DESTACADOS</span>
+                <div class="imagen"></div>
+                <div class="info">
+                    <h3>OBLEA</h3>
+                    <p class="precio">$4,500</p>
+                </div>
+            </div>
+            <div class="card">
+                <span class="etiqueta">DESTACADOS</span>
+                <div class="imagen"></div>
+                <div class="info">
+                    <h3>OBLEA</h3>
+                    <p class="precio">$4,500</p>
+                </div>
+            </div>
+            <div class="card">
+                <span class="etiqueta">DESTACADOS</span>
+                <div class="imagen"></div>
+                <div class="info">
+                    <h3>OBLEA</h3>
+                    <p class="precio">$4,500</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="promociones">
+        <h2>PROMOCIONES</h2>
+        <div class="promociones-container">
+            <div class="promo-card">
+                <div class="promo-img">
+                    <img src="~/images/Fresas.jpeg" alt="Promo 1">
+                </div>
+                <div class="promo-info">
+                    <h3>Combo Fresitas</h3>
+                    <p>Fresas con crema + Cupcake</p>
+                    <span class="promo-precio">$10,000</span>
+                </div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-img">
+                    <img src="~/images/postre.jpeg" alt="Promo 2">
+                </div>
+                <div class="promo-info">
+                    <h3>Oblea De la casa</h3>
+                    <p>Oblea grande + topping extra y doble queso</p>
+                    <span class="promo-precio">$15.000</span>
+                </div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-img">
+                    <img src="~/images/brwnee.jpeg" alt="Promo 3">
+                </div>
+                <div class="promo-info">
+                    <h3>Dúo Especial</h3>
+                    <p>2 Postres a elección</p>
+                    <span class="promo-precio">$15,000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cupon-cumple">
+        <div class="cupon-container">
+            <div class="cupon-info">
+                <h2>¡Celebra tu Cumpleaños con Nosotros! 🎉</h2>
+                <p>Presenta este cupón en tu día especial y obtén un **postre GRATIS**.</p>
+                <p class="codigo-cupon">Código: <span>cumple202500</span></p>
+                <button class="btn-canjear">Presentar Cupón</button>
+            </div>
+            <div class="cupon-img">
+                <img src="~/images/Cupon_cumpleaños.jpeg" alt="Cupón de Cumpleaños">
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        let index = 0;
+        function moveSlide(step) {
+            const carousel = document.querySelector(".carousel");
+            const totalItems = document.querySelectorAll(".categoria").length;
+            index += step;
+            if (index < 0) index = totalItems - 1;
+            if (index >= totalItems) index = 0;
+            carousel.style.transform = `translateX(${-index * 100}%)`;
+        }
+    </script>
+
+</body>
+</html>

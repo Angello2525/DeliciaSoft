@@ -1,7 +1,19 @@
+wwwroot\css\cartas.css
 wwwroot\css\menu.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\brwnee.jpeg
+wwwroot\images\chocolate (2).jpeg
+wwwroot\images\chocolate.jpeg
+wwwroot\images\Cupon_cumpleaños.jpeg
+wwwroot\images\Fresas.jpeg
 wwwroot\images\logo.png
+wwwroot\images\logo_original.jpeg
+wwwroot\images\logo_sin_fondo.png
+wwwroot\images\paletas.jpeg
+wwwroot\images\postre.jpeg
+wwwroot\images\Torta.jpeg
+wwwroot\images\torta2.jpeg
 wwwroot\js\menu.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
